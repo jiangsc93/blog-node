@@ -1,0 +1,35 @@
+{
+  "appenders": {
+    "stdout": {
+      "type": "stdout"
+    },
+    "out": {
+      "type": "dateFile",
+      "filename": "./logs/log",
+      "pattern": "yyyyMMdd-out.log",
+      "alwaysIncludePattern": false
+    },
+    "warn": {
+      "type": "dateFile",
+      "filename": "./logs/log",
+      "pattern": "yyyyMMdd-warn.log",
+      "alwaysIncludePattern": false
+    },
+    "err": {
+      "type": "dateFile",
+      "filename": "./logs/log",
+      "pattern": "yyyyMMdd-error.log",
+      "alwaysIncludePattern": false
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": ["stdout"],
+      "level": "info"
+    },
+    "error": {
+      "appenders": ["stdout", "err"],
+      "level": "error"
+    }
+  }
+}
